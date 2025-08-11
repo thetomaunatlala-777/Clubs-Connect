@@ -51,7 +51,7 @@ Clubs Connect is a web application designed to bring together university clubs, 
 - Twilio or Stream Chat API
 
 ## Project File Structure
-''' 
+```
 clubs-connect/
 ├── public/ # Static files (index.html, favicon, etc.)
 ├── src/ # Source code
@@ -71,4 +71,4 @@ clubs-connect/
 ├── eslint.config.mjs # ESLint configuration file
 ├── README.md # Project documentation
 └── ... # Other config files (e.g., .gitignore)
-'''
+```
