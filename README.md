@@ -50,3 +50,23 @@ Clubs Connect is a web application designed to bring together university clubs, 
 - Google Maps API
 - Twilio or Stream Chat API
 
+## Project File Structure
+clubs-connect/
+├── public/ # Static files (index.html, favicon, etc.)
+├── src/ # Source code
+│ ├── components/ # Reusable React components
+│ ├── pages/ # React pages/views
+│ ├── api/ # API interaction modules (e.g., Supabase)
+│ ├── hooks/ # Custom React hooks
+│ ├── styles/ # CSS/Sass files or styling modules
+│ ├── tests/ # Test files
+│ ├── App.js # Main React app component
+│ ├── index.js # React DOM rendering entry point
+│ └── ... # Other source files
+├── .github/ # GitHub configs (workflows, ISSUE_TEMPLATE, etc.)
+│ └── workflows/ # GitHub Actions workflow files
+├── node_modules/ # npm dependencies (auto-generated)
+├── package.json # Project dependencies and scripts
+├── eslint.config.mjs # ESLint configuration file
+├── README.md # Project documentation
+└── ... # Other config files (e.g., .gitignore)
