@@ -1,10 +1,11 @@
 //PABI'S CODE
-import { useState, useEffect } from 'react'
-import { supabase } from '../supabaseClient'
-import '../styles/Auth.css'
-import StudentDashboard from './StudentDashboard'
-import SGODashboard from './SGODashboard'
-import ExecDashboard from './ExecDashboard'
+import { useState, useEffect } from 'react';
+import { supabase } from '../supabaseClient';
+import { useLocation } from 'react-router-dom';
+import '../styles/Auth.css';
+import StudentDashboard from './StudentDashboard';
+import SGODashboard from './SGODashboard';
+import ExecDashboard from './ExecDashboard';
 
 export default function Auth() {
   const [name, setName] = useState('')
@@ -15,8 +16,11 @@ export default function Auth() {
   const [role, setRole] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
-  const [isRegistering, setIsRegistering] = useState(false)
+  //const [isRegistering, setIsRegistering] = useState(false)
   const [isSignedUp, setIsSignedUp] = useState(false)
+
+  const location = useLocation();
+  const [isRegistering, setIsRegistering] = useState(location.state?.form === 'signup');
 
   const allowedDomain = '@students.wits.ac.za'
   const isWitsEmail = (email) => email.toLowerCase().endsWith(allowedDomain)
@@ -159,11 +163,16 @@ export default function Auth() {
 
   // Google OAuth Sign in
   const handleGoogleSignIn = async () => {
-    setLoading(true)
-    const { error } = await supabase.auth.signInWithOAuth({ provider: 'google' })
-    if (error) setError(error.message)
-    setLoading(false)
-  }
+  setLoading(true)
+  const { error } = await supabase.auth.signInWithOAuth({
+    provider: 'google',
+    options: {
+      redirectTo: `${window.location.origin}/auth` // ensures redirect goes to Auth page
+    }
+  })
+  if (error) setError(error.message)
+  setLoading(false)
+}
 
   // Logout handler
   const handleLogout = async () => {
@@ -207,7 +216,6 @@ export default function Auth() {
           <button onClick={handleLogout}>Logout</button>
         </section>
 
-        {/* Render dashboard based on role */}
         {role === 'student' && <StudentDashboard />}
         {role === 'sgo' && <SGODashboard />}
         {role === 'exec' && <ExecDashboard />}
