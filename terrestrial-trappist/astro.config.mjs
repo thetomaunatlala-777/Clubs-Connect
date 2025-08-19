@@ -25,49 +25,58 @@ export default defineConfig({
 					label: 'Introduction',
 					items: [
 						{ label: 'The Bit-by-Bit Team', slug: 'introduction/team' },
-						{ label: 'Project Overview', slug: 'introduction/clubs_connect' }
+						{ label: 'About', slug: 'introduction/about_team' },
+						{ label: 'Project Overview', slug: 'introduction/project_overview' }
 					]
 				},
 				{
 					label: 'Planning',
 					items: [
 						{ label: 'Methodology', slug: 'planning/methodology' },
-						//{ label: 'Project Overview', slug: 'introduction/clubs_connect' }
+						{ label: 'Technology Stack', slug: 'planning/tech_stack' },
+						{ label: 'Planning Board', slug: 'planning/planning_board' }
 					]
 				},
 				{
 					label: 'Analysis',
 					items: [
-						{ label: 'User Strories', slug: 'analysis/user_stories' },
-						//{ label: 'Project Overview', slug: 'introduction/clubs_connect' }
+						{ label: 'Business Rules', slug: 'analysis/business_rules' },
+						{ label: 'Requirements', slug: 'analysis/requirements' },
+						{ label: 'User Stories', slug: 'analysis/user_stories' }
 					]
 				},
 				{
 					label: 'Design',
 					items: [
-						{ label: 'The Bit-by-Bit Team', slug: 'introduction/team' },
-						{ label: 'Project Overview', slug: 'introduction/clubs_connect' }
+						{ label: 'Interface Design', slug: 'design/interface_design' }
 					]
 				},
 				{
 					label: 'Development',
 					items: [
-						{ label: 'SCRUM Ceremonies', slug: 'development/scrum_ceremonies' },
-						{ label: 'Project Overview', slug: 'introduction/clubs_connect' }
+						{ label: 'Development Guides', slug: 'development/dev_guides' },
+						{ label: 'Code Structure', slug: 'development/code_structure' }
 					]
 				},
 				{
 					label: 'Deployment',
 					items: [
 						{ label: 'The Bit-by-Bit Team', slug: 'introduction/team' },
-						{ label: 'Project Overview', slug: 'introduction/clubs_connect' }
+						//{ label: 'Project Overview', slug: 'introduction/clubs_connect' }
+					]
+				},
+				{
+					label: 'Testing',
+					items: [
+						{ label: 'Test plan', slug: 'testing/testplan' },
+						{ label: 'User Acceptance Tests', slug: 'testing/uat' }
 					]
 				},
 				{
 					label: 'Maintanance',
 					items: [
 						{ label: 'The Bit-by-Bit Team', slug: 'introduction/team' },
-						{ label: 'Project Overview', slug: 'introduction/clubs_connect' }
+						//{ label: 'Project Overview', slug: 'introduction/clubs_connect' }
 					]
 				},
 				{
@@ -75,7 +84,7 @@ export default defineConfig({
 					slug: 'llms',
 				},
 				{
-					label: 'Reference',
+					label: 'References',
 					slug: 'references',
 				},
 				{
