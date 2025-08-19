@@ -233,7 +233,7 @@ export default function Auth() {
               <fieldset>
                 <legend>Signup</legend>
 
-                <label htmlFor="name">Full Name</label>
+                <label htmlFor="name" data-testid="Full-name">Full Name</label>
                 <br />
                 <input
                   id="name"
@@ -269,7 +269,7 @@ export default function Auth() {
                 />
                 <br /><br />
 
-                <button type="submit" disabled={loading}>
+                <button type="submit" disabled={loading} data-testid="SignUp-button">
                   Sign up
                 </button>
                 <br /><br />
@@ -331,7 +331,7 @@ export default function Auth() {
                 />
                 <br /><br />
 
-                <button type="submit" disabled={loading}>
+                <button type="submit" disabled={loading} data-testid="Login-button">
                   Login
                 </button>
                 <br /><br />
