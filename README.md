@@ -3,6 +3,7 @@
 Clubs Connect is a web application designed to bring together university clubs, societies, offices, and councils for the holistic benefit of students.
 
 ## 🌟 Key Features
+
 - Dedicated entity pages
 - Messaging system (personal, group, communal)
 - Event calendar integration
@@ -13,6 +14,7 @@ Clubs Connect is a web application designed to bring together university clubs, 
 - Sponsor and company profiles
 
 ## 🧠 APIs
+
 - Authentication API
 - Messaging API
 - Posts & Feed API
@@ -23,6 +25,7 @@ Clubs Connect is a web application designed to bring together university clubs, 
 - Admin Tools API
 
 ## 🖼️ UI Pages
+
 - Homepage
 - Login/Signup
 - Role-based Dashboard
@@ -35,6 +38,7 @@ Clubs Connect is a web application designed to bring together university clubs, 
 - SGO Admin Panel
 
 ## 🗃️ Database Tables
+
 - Users
 - Entities
 - Posts
@@ -46,11 +50,13 @@ Clubs Connect is a web application designed to bring together university clubs, 
 - Notifications
 
 ## 🔗 External APIs
+
 - Google Calendar API
 - Google Maps API
 - Twilio or Stream Chat API
 
 ## Project File Structure
+
 ```
 clubs-connect/
 ├── public/ # Static files (index.html, favicon, etc.)

@@ -6,6 +6,7 @@ import prettierPlugin from "eslint-plugin-prettier";
 
 export default [
   js.configs.recommended,
+
   {
     files: ["**/*.{js,jsx}"],
     languageOptions: {
@@ -13,7 +14,6 @@ export default [
       sourceType: "module",
       globals: {
         ...globals.browser,
-        React: "writable", // For React in scope if using new JSX transform
       },
       parserOptions: {
         ecmaFeatures: {
@@ -28,6 +28,7 @@ export default [
     },
     rules: {
       ...reactPlugin.configs.recommended.rules,
+      "react/react-in-jsx-scope": "off", // ✅ Turn off old React import rule
       "react-hooks/rules-of-hooks": "error",
       "react-hooks/exhaustive-deps": "warn",
       "prettier/prettier": "error",
@@ -38,22 +39,14 @@ export default [
       },
     },
   },
+
+  // ✅ Jest test file overrides
   {
-    files: ["**/*.test.js", "**/*.spec.js"],
+    files: ["**/*.{test,spec}.{js,jsx}"],
     languageOptions: {
-      ecmaVersion: "latest",
-      sourceType: "module",
       globals: {
-        test: "readonly",
-        expect: "readonly",
-        describe: "readonly",
-        beforeEach: "readonly",
-        afterEach: "readonly",
-        jest: "readonly",
+        ...globals.jest, // ✅ Built-in Jest globals (test, expect, describe, etc.)
       },
-    },
-    rules: {
-      // Optional test-specific overrides
     },
   },
 ];
