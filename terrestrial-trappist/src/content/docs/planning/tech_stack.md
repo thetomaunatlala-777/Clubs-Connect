@@ -27,15 +27,12 @@ Jest includes built-in support for generating code coverage reports without requ
 ## Continuous Integration
 
 ### GitHub Actions
+GitHub Actions is a continuous integration and continuous delivery (CI/CD) platform integrated within GitHub, enabling the automation of software development workflows directly within your repository. It allows you to define and execute automated tasks in response to various events within your GitHub repository, such as pushes, pull requests, or issue creation. Since we were using GitHub for version control, to minimise the tools we were using we went with GitHub actions.
 
 ## Documentation
 
 ### Astro JS
-The documentation website was build 
-
-## Project Management
-
-### Clickup
+The documentation website was build using an Astro JS template Starlight. This was because we wanted a formal document and as a requirement of the project, creating a documentation website using a template was our best time.
 
 ## Languages
 

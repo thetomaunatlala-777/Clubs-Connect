@@ -34,7 +34,7 @@ export default defineConfig({
 					items: [
 						{ label: 'Methodology', slug: 'planning/methodology' },
 						{ label: 'Technology Stack', slug: 'planning/tech_stack' },
-						{ label: 'Planning Board', slug: 'planning/planning_board' }
+						// { label: 'Planning Board', slug: 'planning/planning_board' }
 					]
 				},
 				{
@@ -48,7 +48,8 @@ export default defineConfig({
 				{
 					label: 'Design',
 					items: [
-						{ label: 'Interface Design', slug: 'design/interface_design' }
+						{ label: 'Interface Design', slug: 'design/interface_design' },
+						{ label: 'Data Models', slug: 'design/data_models' }
 					]
 				},
 				{
@@ -61,7 +62,7 @@ export default defineConfig({
 				{
 					label: 'Deployment',
 					items: [
-						{ label: 'The Bit-by-Bit Team', slug: 'introduction/team' },
+						{ label: 'Deployment Plan', slug: 'deployment/deploy_plan' },
 						//{ label: 'Project Overview', slug: 'introduction/clubs_connect' }
 					]
 				},
@@ -75,7 +76,7 @@ export default defineConfig({
 				{
 					label: 'Maintanance',
 					items: [
-						{ label: 'The Bit-by-Bit Team', slug: 'introduction/team' },
+						//{ label: 'The Bit-by-Bit Team', slug: 'introduction/team' },
 						//{ label: 'Project Overview', slug: 'introduction/clubs_connect' }
 					]
 				},
