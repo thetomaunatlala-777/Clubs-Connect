@@ -82,6 +82,10 @@ export default function Auth() {
           fetchProfile(session.user.id).then((profile) => {
             setUserName(profile?.full_name || '')
             setRole(profile?.role || '')
+
+          if (profile?.role === 'student') navigate('/dashboard/student')
+          else if (profile?.role === 'sgo') navigate('/dashboard/sgo')
+          else if (profile?.role === 'exec') navigate('/dashboard/exec')
           })
         }
       }
@@ -100,6 +104,10 @@ export default function Auth() {
           fetchProfile(session.user.id).then((profile) => {
             setUserName(profile?.full_name || '')
             setRole(profile?.role || '')
+
+          if (profile?.role === 'student') navigate('/dashboard/student')
+          else if (profile?.role === 'sgo') navigate('/dashboard/sgo')
+          else if (profile?.role === 'exec') navigate('/dashboard/exec')
           })
         }
       } else {
